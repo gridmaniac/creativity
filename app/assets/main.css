@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Rampart One", "sans-serif";
+  --font-secondary: "Mochiy Pop P One", "sans-serif";
+  --font-small: "Hina Mincho", "sans-serif";
+  --font-rock: "RocknRoll One", "sans-serif";
+}
