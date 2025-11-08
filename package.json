@@ -14,10 +14,12 @@
     "@nuxt/eslint": "^1.10.0",
     "@nuxt/image": "^1.11.0",
     "@nuxt/ui": "^4.1.0",
+    "@vercel/edge-config": "^1.4.3",
     "@vueuse/nuxt": "^14.0.0",
     "better-sqlite3": "^12.4.1",
     "eslint": "^9.39.1",
     "nuxt": "^4.2.0",
+    "nuxt-mongoose": "^1.0.6",
     "typescript": "^5.9.3",
     "vue": "^3.5.22",
     "vue-router": "^4.6.3"

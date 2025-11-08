@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/ui",
     "@vueuse/nuxt",
+    "nuxt-mongoose",
   ],
   css: ["~/assets/main.css"],
   app: {
