@@ -3,3 +3,8 @@ interface Poll {
   yes: number;
   no: number;
 }
+
+interface Slide {
+  _id: string;
+  name: string;
+}

@@ -33,7 +33,6 @@ onMounted(() => {
     refresh();
     poll.yes = data.value?.yes || 0;
     poll.no = data.value?.no || 0;
-    console.log(data.value);
   }, 1000);
 });
 

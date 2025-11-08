@@ -13,6 +13,22 @@
 <script setup lang="ts">
 const route = useRoute();
 
+const { data, refresh } = useFetch<Slide>("/api/slide");
+let timer: NodeJS.Timeout;
+
+onMounted(() => {
+  timer = setInterval(async () => {
+    if (slides.indexOf(route.name as string) === -1) return;
+    refresh();
+    if (data.value?.name !== route.name)
+      navigateTo(data.value?.name === "index" ? "" : data.value?.name);
+  }, 1000);
+});
+
+onBeforeUnmount(() => {
+  clearInterval(timer);
+});
+
 const slides = [
   "index",
   "rule-society",
@@ -30,20 +46,22 @@ onKeyStroke("ArrowRight", () => goNext());
 onKeyStroke("ArrowLeft", () => goPrev());
 onKeyStroke(" ", () => goNext());
 
-const goPrev = () => {
-  const name = route.name;
-  const key = slides.indexOf(name as string);
-  if (key - 1 >= 0) {
-    navigateTo(slides[key - 1] === "index" ? "" : slides[key - 1]);
-  }
+const goPrev = async () => {
+  // const name = route.name;
+  // const key = slides.indexOf(name as string);
+  // if (key - 1 >= 0) {
+  //   navigateTo(slides[key - 1] === "index" ? "" : slides[key - 1]);
+  // }
+  await $fetch("/api/prev");
 };
 
-const goNext = () => {
-  const name = route.name;
-  const key = slides.indexOf(name as string);
-  if (key + 1 < slides.length) {
-    navigateTo(slides[key + 1] === "index" ? "" : slides[key + 1]);
-  }
+const goNext = async () => {
+  // const name = route.name;
+  // const key = slides.indexOf(name as string);
+  // if (key + 1 < slides.length) {
+  //   navigateTo(slides[key + 1] === "index" ? "" : slides[key + 1]);
+  // }
+  await $fetch("/api/next");
 };
 </script>
 
