@@ -15,4 +15,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },
+  devServer: {
+    host: "0.0.0.0",
+  },
 });

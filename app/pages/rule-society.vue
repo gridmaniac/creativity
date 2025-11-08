@@ -9,12 +9,14 @@
       <div
         class="rounded-2xl z-10 px-5 bg-white w-[8rem] border-blue-400 border-12"
       >
-        <h2 class="text-[4rem] font-small text-blue-400">テキスト1</h2>
+        <h2 class="text-[4rem] font-small text-blue-400">同じやり方</h2>
       </div>
       <div
         class="rounded-2xl z-10 px-5 bg-white w-[8rem] border-blue-400 border-12"
       >
-        <h2 class="text-[4rem] font-small text-blue-400">　テキスト2</h2>
+        <h2 class="text-[4rem] font-small text-blue-400">
+          　同じペ<span class="vert -ml-4">ー</span>ス
+        </h2>
       </div>
     </div>
     <video

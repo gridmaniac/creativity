@@ -6,13 +6,16 @@
         class="button flex-1 flex justify-center items-center"
         @click="yes"
       >
-        <div class="border-blue-400 rounded-full border-16 size-32" />
+        <div class="border-blue-400 rounded-full border-16 size-28" />
       </button>
       <button
         class="button flex-1 flex justify-center items-center"
         @click="no"
       >
-        <span class="text-[8rem] text-red-400 leading-32">✕</span>
+        <img
+          class="aspect-square object-cover size-28"
+          src="~/assets/sprites/batsu_sign.png"
+        />
       </button>
     </div>
   </div>
